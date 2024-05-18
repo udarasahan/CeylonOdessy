@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <p>Registration</p>
+        </div>
+
+        <form action="connectSql/login.php" method="post" onsubmit="return validateForm()">
+            <div class="user_details">
+                <div class="input_box">
+                    <label for="name">First Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" name="firstName" required>
+                </div>
+                <div class="input_box">
+                    <label for="username">Last Name</label>
+                    <input type="text" id="username" placeholder="Enter your LastName" name="lastName" required>
+                </div>
+                <div class="input_box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" name="email" required>
+                </div>
+                <div class="input_box">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" placeholder="Enter your password" name="password" required>
+                </div>
+                <div class="input_box">
+                    <label for="confirmPass">Confirm Password</label>
+                    <input type="password" id="confirmPass" placeholder="Confirm your password" name="confirmPassword" required>
+                </div>
+            </div>
+            <div class="reg_btn">
+                <input type="submit" value="Register" name="submit">
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function validateForm() {
+            var firstName = document.getElementById("name").value;
+            var lastName = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("pass").value;
+            var confirmPassword = document.getElementById("confirmPass").value;
+
+            if (firstName == "" || lastName == "" || email == "" || password == "" || confirmPassword == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'All fields are required!',
+                });
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Passwords do not match!',
+                });
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

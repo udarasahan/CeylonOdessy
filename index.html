@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive tour and travel agency website design tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!--cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/><!--references-->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!--header section start-->
+        <header>
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <a href="#" class="logo"><span>CEYLON</span>Odessy</a>
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#book">book</a>
+                <a href="#packages">packages</a>
+                <a href="#services">services</a>
+                <a href="#gallery">gallery</a>
+                <a href="#review">review</a>
+                <a href="#contact">contact</a>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-search" id="search-btn"></i>
+                <i class="fas fa-user" id="login-btn"></i>
+            </div>
+
+            <form action="" class="serch-bar-container">
+                <input type="search" id="search-bar" placeholder="search here.....">
+                <label for="search-bar" class="fas fa-search" ></label>
+            </form>
+        </header>
+    <!--header section end-->
+    <!--login form container-->
+    <div class="login-form-container">
+
+        <i class="fas fa-time" id="form-close"></i>
+
+        <form action="connectSql/signin.php" method="post">
+            <h3>Login</h3>
+            <input type="email" class="box" placeholder="Enter your email" name="email" required>
+            <input type="password" class="box" placeholder="Enter your password" name="password" required>
+            <input type="submit" value="Login Now" class="btn" name="submit">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember me</label>
+            <p>Forgot password? <a href="#">Click here</a></p>
+            <p>Don't have an account? <a href="login.html">Register now</a></p>
+        </form> 
+    </div>
+    <!--login form container end-->
+    <!--home section start-->
+        <section class="home" id="home">
+            <div class="content">
+                <h3>Experience the serenity of Sri Lanka's paradise with us</h3>
+                <p>Your journey to the heart of this island gem begins here...</p>
+                <a href="#" class="btn">discover more</a>
+            </div>
+            <div class="controls">
+                <span class="vid-btn active" data-src="images/sl_1.mp4"></span>
+                <span class="vid-btn" data-src="images/sl_2.mp4"></span>
+                <span class="vid-btn" data-src="images/sl_3.mp4"></span>
+                <span class="vid-btn" data-src="images/SL_4.mp4"></span>
+                <span class="vid-btn" data-src="images/SL_5.mp4"></span>
+            </div>
+            <div class="video-container">
+                <video src="images/sl_1.mp4" id="video-slider" loop autoplay muted></video>
+            </div>
+        </section>
+    <!--home section end-->
+    <!--book section start-->
+        <section class="book" id="book">
+            <h1 class="heading">
+                <span>b</span>
+                <span>o</span>
+                <span>o</span>
+                <span>k</span>
+                <span class="space"></span>
+                <span>n</span>
+                <span>o</span>
+                <span>w</span>
+            </h1>
+            <div class="row">
+                <div class="image">
+                    <img src="images/clip.jpg" alt="">
+                </div>
+                <form action="php/booking.php" method="post">
+                    <div class="inputBox">
+                        <h3>where to</h3>
+                        <input type="text" placeholder="place name" name="whereTo" id="">
+                    </div>
+                    <div class="inputBox">
+                        <h3>how many</h3>
+                        <input type="number" placeholder="number of guests" name="howMany" id="">
+                    </div>
+                    <div class="inputBox">
+                        <h3>arrivals</h3>
+                        <input type="date" name="arrival" id="">
+                    </div>
+                    <div class="inputBox">
+                        <h3>leaving</h3>
+                        <input type="date" name="leaving" id="">
+                    </div>
+                    <input type="submit" class="btn" value="book now" id="">
+                   </form>
+            </div>
+        </section>
+    <!--book section end-->
+    <!--packeg section start-->
+    <section class="packages" id="packages">
+        <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/hilton.jpg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Hilton</h3>
+                    <p>We’re in Colombo’s business district, connected to the World Trade Centre. Dutch Hospital shopping is less than five minutes away, and we’re under two kilometers from Galle Face Beach. Gangarama Temple is 10 minutes away. Enjoy our outdoor pool, karaoke bar, and on-site restaurants.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">$90.00<span> $120.00</span></div>
+                    <a href="https://www.hilton.com/en/hotels/colhitw-hilton-colombo/?WT.mc_id=zLADA0LK1HI2PSH3GGL4INTBPP5dkt6COLHITW7en_&epid!_&ebuy!&&&&&gad=1&gclid=Cj0KCQjwjt-oBhDKARIsABVRB0xEPBKtNBclfJiJbMk75JYzvUnFbNIC9mbkam5hEOJCa1TudCJ4vKoaAqNsEALw_wcB&gclsrc=aw.ds" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/galadari.jpg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Galadari</h3>
+                    <p>The finest star class hotel in Sri Lanka with the best of dinning, accommodation and entertainment facilities. This 450 roomed beauty is located facing the foaming ripples of the Indian Ocean and remains to be one of the best hotels in Sri Lanka.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">$85.00<span> $110.00</span></div>
+                    <a href="http://www.galadarihotel.lk/" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/shangrila.jpeg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Shangri-La</h3>
+                    <p>Our well-situated luxury Shangri-La Colombo offers exquisite rooms, suites and extensive dining choices with heartfelt and thoughtful service</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">$95.00<span> $125.00</span></div>
+                    <a href="https://www.shangri-la.com/en/colombo/shangrila/?WT.mc_id=SLCB_202009_LK_SEM_GOOGLE_ALWAYSON_BRAND-BMM-TEXTLINK_AON2019_EN-RSA-Shangri-la%20colombo&&&gclid=Cj0KCQjwjt-oBhDKARIsABVRB0xyNgSQ8xoIPFX3GxXfGo2wShhr1x5fs_twNcWLPGdVdR6HAA5Gd-AaArfcEALw_wcB&gclsrc=aw.ds" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/araliya.jpg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Araliya Green City</h3>
+                    <p>Located amidst misty mountains, surreal tea hills and salubrious climes Araliya Green Hills is premier amongst hotels in Nuwaraeliya that is adorned by colonial splendour and an eclectic charm.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">$70.00<span> $82.00</span></div>
+                    <a href="https://www.araliyaresorts.com/araliya-green-city/" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/merchant.jpg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>The Mer.Chant</h3>
+                    <p>THE MER.CHANT features a garden, terrace, a restaurant and bar in Galle. This property is located a short distance from attractions such as Galle Light house, Dutch Church Galle, and Galle International Cricket Stadium.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">$65.00<span> $70.00</span></div>
+                    <a href="http://themerchantgallefort.com/" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/summit.jpg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>The Summit</h3>
+                    <p>Set in Kandy, 3.4 km from Bogambara Stadium, The Summit offers accommodation with a garden, free private parking and a bar. This 5-star hotel offers room service, a 24-hour front desk and free WiFi.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">$55.00<span> $70.00</span></div>
+                    <a href="https://summit97.com/" class="btn">book now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--packeg section end-->
+    <!--service section start-->
+    <section class="services" id="services">
+        <h1 class="heading">
+            <span>s</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h3>affordable hotels</h3>
+                <p>Discover budget-friendly accommodations that don't skimp on quality. From charming boutique hotels to cozy guesthouses, 
+				we offer comfortable stays for every budget. Explore Sri Lanka's wonders without breaking the bank. Your affordable getaway starts here.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>food and drinks</h3>
+                <p>Indulge in the vibrant culinary scene of Sri Lanka with our "Food and Drinks" selection. From aromatic spices to mouthwatering 
+				street food and exquisite dining experiences, we invite you to savor the authentic flavors of this enchanting island.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>safty guid</h3>
+                <p>While our heart belongs to Sri Lanka, we understand the allure of global exploration. Our "Around the World" offerings extend your 
+				horizons, helping you create unforgettable memories beyond our island paradise.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-globe-asia"></i>
+                <h3>around the Island</h3>
+                <p>Discover the whole country with us. Our "Around the Island" selection takes you on a Islandwide journey to explore diverse cultures, 
+				breathtaking landscapes, and iconic destinations.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-plane"></i>
+                <h3>fastest travel</h3>
+                <p>Experience travel at its swiftest with our "Fastest Travel" options. We understand that time is precious, and our expedited services are 
+				designed to streamline your journey, ensuring you make the most of every moment.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-hiking"></i>
+                <h3>adventures</h3>
+                <p>Experience travel at its swiftest with our "Fastest Travel" options. We understand that time is precious, and our expedited services are 
+				designed to streamline your journey, ensuring you make the most of every moment.</p>
+            </div>
+        </div>
+    </section>
+    <!--service section end-->
+    <!--gallery section start-->
+        <section class="gallery" id="gallery">
+            <h1 class="heading">
+                <span>g</span>
+                <span>a</span>
+                <span>l</span>
+                <span>l</span>
+                <span>e</span>
+                <span>r</span>
+                <span>y</span>
+            </h1>
+    
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="images/srilankaguide1.jpg" alt="">
+                    <div class="content">
+                        <h3>Nanuoya</h3>
+                        <p>Nanuoya, where the hills echo with the whispers of tea leaves and the mist embraces your every step. </p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/2-g.jpeg" alt="">
+                    <div class="content">
+                        <h3>Benthota</h3>
+                        <p>Where the golden sands meet the turquoise sea, and time stands still in paradise.</p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/srilankatrain.jpg" alt="">
+                    <div class="content">
+                        <h3>Ella</h3>
+                        <p>Where lush greenery meets mountain serenity, and every moment is a journey of awe.</p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/srilankalandscape.jpg" alt="">
+                    <div class="content">
+                        <h3>Sigiriya</h3>
+                        <p>Where history meets the heavens, and every step echoes with ancient whispers.</p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/srilankaboathouse.jpg" alt="">
+                    <div class="content">
+                        <h3>Balapitiya</h3>
+                        <p>A tranquil hideaway on Sri Lanka's southwestern shores, where nature's beauty whispers secrets to the soul</p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/5-g.jpg" alt="">
+                    <div class="content">
+                        <h3>Anuradhapura</h3>
+                        <p>Cradle of ancient civilization, where history whispers through time - Anuradhapura, where the past comes alive</p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/Galle_Fort.jpg" alt="">
+                    <div class="content">
+                        <h3>Galle</h3>
+                        <p>Where history whispers through cobblestone streets, and the sea serenades the fort's ancient tales.</p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/nallur.jpg" alt="">
+                    <div class="content">
+                        <h3>Jaffna</h3>
+                        <p>Where history whispers through the winds, and culture dances in every corner.</p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/polonn.jpg" alt="">
+                    <div class="content">
+                        <h3>Polonnaruwa</h3>
+                        <p>Where history whispers through ancient stones, and nature's beauty dances along tranquil lakeshores</p>
+                        <a href="#" class="btn">See More</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    <!--hallery section end-->
+    <!--review section start-->
+        <section class="review" id="review">
+            <h1 class="heading">
+                <span>r</span>
+                <span>e</span>
+                <span>v</span>
+                <span>i</span>
+                <span>e</span>
+                <span>w</span>
+            </h1>
+            <div class="swiper-container review-slider">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="images/pic1.png" alt="">
+                            <h3>john deo</h3>
+                            <p>I had an amazing experience using CeylonOdessey. The website was easy to use, and the customer service was exceptional. 
+							I found my dream trip and got valuable travel tips. I'll definitely be coming back. Thank you!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="images/pic2.png" alt="">
+                            <h3>john deo</h3>
+                            <p>Kudos to CeylonOdessey! Your website made planning my trip a breeze. The options, service, and tips were fantastic. 
+							I can't wait for my next adventure with you!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="images/pic3.png" alt="">
+                            <h3>john deo</h3>
+                            <p>imply outstanding! CeylonOdessey has set a new standard for travel planning. The website is intuitive, the choices are diverse, and the support is exceptional. 
+							I'm thrilled with my experience and can't wait to explore more with you.</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="images/pic4.png" alt="">
+                            <h3>john deo</h3>
+                            <p>Bravo, CeylonOdessey! Your website exceeded my expectations. It's user-friendly, and the variety of options is impressive. 
+							The service and advice were invaluable. I'm eagerly looking forward to my next adventure with you!</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--review section end-->
+    <!--contact section start-->
+        <section class="contact">
+            <h1 class="heading">
+                <span>c</span>
+                <span>o</span>
+                <span>n</span>
+                <span>t</span>
+                <span>a</span>
+                <span>c</span>
+                <span>t</span>
+            </h1>
+            <div class="row">
+
+                <div class="image">
+                    <img src="images/elep.jpg" alt="">
+                </div>
+
+                <form action="">
+                    <div class="inputBox">
+                        <input type="text" placeholder="name">
+                        <input type="email" placeholder="email">
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="number" placeholder="number">
+                        <input type="text" placeholder="subject">
+                    </div>
+                    <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+                    <input type="submit" class="btn" value="send message">
+                </form>
+            </div>
+        </section>
+    <!--contact section end-->
+   
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>about us</h3>
+            <p>At CeylonOdessey, we're not just travel enthusiasts; we're your dedicated partners in exploration. With a passion for discovering the world's wonders, we've made it our mission to turn your travel dreams into reality. Our team of experienced adventurers, travel experts, and cultural enthusiasts is here to curate unforgettable journeys tailored to your desires. Join us on a voyage of discovery, and let's create extraordinary memories together. Your journey begins here, with CeylonOdessey.</p>
+        </div>
+
+        <div class="box">
+            <h3>branch location</h3>
+            <a href="#">Colombo</a>
+            <a href="#">Kandy</a>
+            <a href="#">Galle</a>
+            <a href="#">Dambulla</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">book</a>
+            <a href="#">packages</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+    </div>
+    <h1 class="credit">careted by<span> UOK Students</span>| all rights reserved!</h1>
+</section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js">
+
+    </script>
+</body>
+</html>
